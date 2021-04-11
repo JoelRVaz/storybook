@@ -1,21 +1,19 @@
 import React from 'react';
 import './StoryGraph.css'
-
-
+import Node from './Node';
+import {Data} from './data';
 
 function StoryGraph() {
     return (
-        <div>
         <div id="window">
             <div id="graph-container">
                 <div id="node-layer">
-                    <div className="block"></div>
+                    <Node></Node>
                 </div>
                 <div id="line-layer">
                     
                 </div>
             </div>
-        </div>
         </div>
     )
 }
