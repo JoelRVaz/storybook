@@ -1,14 +1,20 @@
 import React from 'react';
 import './StoryGraph.css'
 import Node from './Node';
-import {Data} from './data';
+import {chronology} from './data';
+
 
 function StoryGraph() {
+    const nodes = chronology[3].nodes;
+    let nodes_elem =  nodes.map((node) => {
+       return  <Node nodeattr={node}></Node>;
+    });
     return (
+
         <div id="window">
             <div id="graph-container">
                 <div id="node-layer">
-                    <Node></Node>
+                    {nodes_elem}
                 </div>
                 <div id="line-layer">
                     
